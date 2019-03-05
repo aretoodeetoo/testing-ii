@@ -20,12 +20,12 @@ class Display extends React.Component{
             <h2>Check Out The Score:</h2>
             <CountWrapper>
                 <CountDiv>
-                <h3>Balls</h3>
-                <div>{this.props.balls}</div>
+                    <h3>Strikes</h3>
+                    <div data-testid="strike-display">{this.props.strikes}</div>
                 </CountDiv>
                 <CountDiv>
-                <h3>Strikes</h3>
-                <div>{this.props.strikes}</div>
+                    <h3>Balls</h3>
+                    <div>{this.props.balls} balls</div>
                 </CountDiv>
             </CountWrapper>
             </>
