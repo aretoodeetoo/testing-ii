@@ -17,13 +17,13 @@ describe('<Display />', () => {
         expect(text).toBeInTheDocument();
     });
 
-    // it('receives counted props', () => {
-    //     const { getByTestId, rerender } = render(<Display strikes={2} />);
-    //     expect(getByTestId('strike-display').textContent).toBe('2');
+    it('receives counted props', () => {
+        const { getByTestId, rerender } = render(<Display strikes={2} />);
+        expect(getByTestId('strike-display').textContent).toBe('2');
 
-    //     rerender(<Display strikes={2} />);
-    //     expect(getByTestId('strike-display').textContent).toBe('2');
-    // })
+        rerender(<Display strikes={2} />);
+        expect(getByTestId('strike-display').textContent).toBe('2');
+    })
 
     }
 );

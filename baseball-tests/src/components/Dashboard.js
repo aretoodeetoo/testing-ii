@@ -15,7 +15,7 @@ class Dashboard extends React.Component{
         if (this.state.strikeCount === 3) {
             this.setState({ strikeCount: 0, ballCount: 0})
         } else {
-        this.setState({ strikeCount: this.state.strikeCount + 1 });
+            this.setState({ strikeCount: this.state.strikeCount + 1 });
         }
     }
 
@@ -23,7 +23,7 @@ class Dashboard extends React.Component{
         if (this.state.ballCount === 4) {
             this.setState({ strikeCount: 0, ballCount: 0})
         } else {
-        this.setState({ ballCount: this.state.ballCount + 1 });
+            this.setState({ ballCount: this.state.ballCount + 1 });
         }
     }
 
@@ -35,7 +35,7 @@ class Dashboard extends React.Component{
         if (this.state.hitIncrement === 1){
             this.setState({ strikeCount: 0, ballCount: 0 });
         } else {
-        this.setState({ hitCount: this.state.hitCount + 1 });
+            this.setState({ hitCount: this.state.hitCount + 1 });
         }
     }
 
@@ -44,10 +44,10 @@ class Dashboard extends React.Component{
             <>
             <div className="dashboard">
             <h1>Welcome, Baseball Personnel!</h1>
-                <Button onClick={() => this.strikeIncrement()}>Strike</Button>
-                <Button onClick={() => this.ballIncrement()}>Ball</Button>
-                <Button onClick={() => this.foulIncrement()}>Foul</Button>
-                <Button onClick={() => this.hitIncrement()}>Hit</Button>
+                <Button data-testid="strike-button" onClick={() => this.strikeIncrement()}>Strike</Button>
+                <Button data-testid="ball-button" onClick={() => this.ballIncrement()}>Ball</Button>
+                <Button data-testid="foul-button" onClick={() => this.foulIncrement()}>Foul</Button>
+                <Button data-testid="hit-button" onClick={() => this.hitIncrement()}>Hit</Button>
             </div>
             <div className="display">
                 <Display

@@ -25,7 +25,7 @@ class Display extends React.Component{
                 </CountDiv>
                 <CountDiv>
                     <h3>Balls</h3>
-                    <div>{this.props.balls} balls</div>
+                    <div>{this.props.balls}</div>
                 </CountDiv>
             </CountWrapper>
             </>
