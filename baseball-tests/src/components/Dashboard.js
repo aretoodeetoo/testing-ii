@@ -1,4 +1,5 @@
 import React from 'react';
+import Display from './Display';
 
 import Button from '@material-ui/core/Button';
 
@@ -41,11 +42,19 @@ class Dashboard extends React.Component{
     render(){
         return(
             <>
+            <div className="dashboard">
             <h1>Welcome, Baseball Personnel!</h1>
-            <Button onClick={() => this.strikeIncrement()}>Strike</Button>
-            <Button onClick={() => this.ballIncrement()}>Ball</Button>
-            <Button onClick={() => this.foulIncrement()}>Foul</Button>
-            <Button onClick={() => this.hitIncrement()}>Hit</Button>
+                <Button onClick={() => this.strikeIncrement()}>Strike</Button>
+                <Button onClick={() => this.ballIncrement()}>Ball</Button>
+                <Button onClick={() => this.foulIncrement()}>Foul</Button>
+                <Button onClick={() => this.hitIncrement()}>Hit</Button>
+            </div>
+            <div className="display">
+                <Display
+                    balls={this.state.ballCount}
+                    strikes={this.state.strikeCount}
+                />
+            </div>
             </>
         );
     }
