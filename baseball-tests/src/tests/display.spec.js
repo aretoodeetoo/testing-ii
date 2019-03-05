@@ -1,8 +1,9 @@
 import React from 'react';
-import { render } from 'react-testing-library';
+import { render, fireEvent } from 'react-testing-library';
 import 'jest-dom/extend-expect';
 
 import Display from '../components/Display';
+import Dashboard from '../components/Dashboard';
 
 describe('<Display />', () => {
     it('displays ball count', () => {
@@ -17,13 +18,17 @@ describe('<Display />', () => {
         expect(text).toBeInTheDocument();
     });
 
-    it('receives counted props', () => {
-        const { getByTestId, rerender } = render(<Display strikes={2} />);
-        expect(getByTestId('strike-display').textContent).toBe('2');
+    // it('should show count number', () => {
+    //     const strikes = [{
+    //         count: 0
+    //     }]
+    //     const { getAllByTestId } = render(<Display strikes={strikes}/>);
 
-        rerender(<Display strikes={2} />);
-        expect(getByTestId('strike-display').textContent).toBe('2');
-    })
+    //     const strikeCheck = getAllByTestId('strike-display').map(c => c.textContent);
+    //     const strikeList = strikes.map(s => s.count);
+
+    //     expect(strikeCheck).toEqual(strikeList);
+    // })
 
     }
 );
